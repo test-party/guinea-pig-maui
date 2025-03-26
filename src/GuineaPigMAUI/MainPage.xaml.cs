@@ -16,5 +16,10 @@ public partial class MainPage : ContentPage
 	{
 		await Navigation.PushAsync(new CheckboxPage());
 	}
+
+	private async void OnOpenImageScreenClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new ImagePage());
+	}
 }
 

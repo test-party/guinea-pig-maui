@@ -21,6 +21,13 @@
                 SemanticProperties.Hint="Opens the Checkbox Screen page"
                 Clicked="OnOpenCheckboxScreenClicked"
                 HorizontalOptions="Fill"/>
+
+            <Button
+                x:Name="OpenImageScreenBtn"
+                Text="Image Test"
+                SemanticProperties.Hint="Opens the Image Screen page"
+                Clicked="OnOpenImageScreenClicked"
+                HorizontalOptions="Fill"/>
         </VerticalStackLayout>
     </ScrollView>
 
