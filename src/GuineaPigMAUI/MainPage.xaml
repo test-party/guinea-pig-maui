@@ -35,6 +35,13 @@
                 SemanticProperties.Hint="Opens the Image Screen page"
                 Clicked="OnOpenImageScreenClicked"
                 HorizontalOptions="Fill"/>
+
+            <Button
+                x:Name="OpenProgressIndicatorScreenBtn"
+                Text="Progress Indicator Test"
+                SemanticProperties.Hint="Opens the Progress Indicator Screen page"
+                Clicked="OnOpenProgressIndicatorScreenClicked"
+                HorizontalOptions="Fill"/>
             
             <Button
                 x:Name="OpenTextInputScreenBtn"

@@ -27,6 +27,11 @@ public partial class MainPage : ContentPage
 		await Navigation.PushAsync(new ImagePage());
 	}
 
+	private async void OnOpenProgressIndicatorScreenClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new ProgressIndicatorPage());
+	}
+
 	private async void OnOpenTextInputScreenClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new TextInputPage());
