@@ -21,6 +21,13 @@
                 SemanticProperties.Hint="Opens the Checkbox Screen page"
                 Clicked="OnOpenCheckboxScreenClicked"
                 HorizontalOptions="Fill"/>
+            
+            <Button
+                x:Name="OpenDatePickerScreenBtn"
+                Text="Date Picker Test"
+                SemanticProperties.Hint="Opens the Date Picker Screen page"
+                Clicked="OnOpenDatePickerScreenClicked"
+                HorizontalOptions="Fill"/>
 
             <Button
                 x:Name="OpenImageScreenBtn"

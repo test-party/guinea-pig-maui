@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuineaPigMAUI.DatePickerPage"
+             Title="Date Picker Test">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <!-- Title Section -->
+            <VerticalStackLayout Margin="0,10" 
+                                 HorizontalOptions="Center">
+                <Label Text="Testing &quot;date-picker-label&quot; rule"
+                       FontSize="24"
+                       Style="{StaticResource ThemedText}"/>
+            </VerticalStackLayout>
+            
+            <!-- Default Passing Case -->
+            <Label Text="Default Passing Case"
+                   Margin="10,0"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <VerticalStackLayout Margin="0,10" 
+                                 HorizontalOptions="Center">
+                <DatePicker x:Name="MyDatePicker"
+                            SemanticProperties.Description="I Pass"
+                            Format="D" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
