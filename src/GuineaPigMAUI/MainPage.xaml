@@ -28,6 +28,13 @@
                 SemanticProperties.Hint="Opens the Image Screen page"
                 Clicked="OnOpenImageScreenClicked"
                 HorizontalOptions="Fill"/>
+            
+            <Button
+                x:Name="OpenTextInputScreenBtn"
+                Text="Text Input Test"
+                SemanticProperties.Hint="Opens the Text Input Screen page"
+                Clicked="OnOpenTextInputScreenClicked"
+                HorizontalOptions="Fill"/>
         </VerticalStackLayout>
     </ScrollView>
 

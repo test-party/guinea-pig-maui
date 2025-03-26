@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuineaPigMAUI.TextInputPage"
+             Title="Text Input Screen">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="10">
+
+            <!-- Header -->
+            <Label Text="Testing &quot;text-input&quot; rule"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,16"
+                   Style="{StaticResource ThemedText}"/>
+
+            <!-- Pass Case: Visual Label + accessibilityLabel -->
+            <Label Text="Pass Case: Visual Label + accessibilityLabel"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Margin="0,30,0,6"
+                   IsVisible="True"
+                   SemanticProperties.Description=""
+                   SemanticProperties.HeadingLevel="Level2"/>
+
+            <VerticalStackLayout>
+                <Label Text="Number Field"
+                       FontSize="14"
+                       Margin="0,0,0,4"
+                       TextColor="#333333"/>
+                <Entry x:Name="Field1"
+                       Placeholder="Enter a number"
+                       Keyboard="Numeric"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       Margin="12,0"
+                       VerticalOptions="Center"
+                       SemanticProperties.Description="This is the label for the input field"
+                       SemanticProperties.Hint="Enter a number"/>
+            </VerticalStackLayout>
+
+            <!-- Fail Case: Visual Label Only (no accessibilityLabel) -->
+            <Label Text="Fail Case: Visual Label Only (no accessibilityLabel)"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Margin="0,30,0,6"
+                   IsVisible="True"
+                   SemanticProperties.Description=""
+                   SemanticProperties.HeadingLevel="Level2"/>
+
+            <VerticalStackLayout>
+                <Label Text="Number Field"
+                       FontSize="14"
+                       Margin="0,0,0,4"
+                       TextColor="#333333"/>
+                <Entry x:Name="Field2"
+                       Placeholder="Enter a number"
+                       Keyboard="Numeric"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       Margin="12,0"
+                       VerticalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <!-- Fail Case: accessibilityLabel Only (no visual label) -->
+            <Label Text="Fail Case: accessibilityLabel Only (no visual label)"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Margin="0,30,0,6"
+                   IsVisible="True"
+                   SemanticProperties.Description=""
+                   SemanticProperties.HeadingLevel="Level2"/>
+
+            <VerticalStackLayout>
+                <Entry x:Name="Field3"
+                       Placeholder="Enter a number"
+                       Keyboard="Numeric"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       Margin="12,0"
+                       VerticalOptions="Center"
+                       SemanticProperties.Description="This is the label for the input field"
+                       SemanticProperties.Hint="Enter a number"/>
+            </VerticalStackLayout>
+
+            <!-- Fail Case: Placeholder Only (no visual label or accessibilityLabel) -->
+            <Label Text="Fail Case: Placeholder Only (no visual label or accessibilityLabel)"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Margin="0,30,0,6"
+                   IsVisible="True"
+                   SemanticProperties.Description=""
+                   SemanticProperties.HeadingLevel="Level2"/>
+
+            <VerticalStackLayout>
+                <Entry x:Name="Field4"
+                       Placeholder="Placeholder only"
+                       Keyboard="Numeric"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       Margin="12,0"
+                       VerticalOptions="Center"/>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
