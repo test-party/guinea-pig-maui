@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuineaPigMAUI.ButtonPage"
+             Title="Button Screen">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+            
+            <VerticalStackLayout Margin="0,10" HorizontalOptions="Center">
+                <Label Text="Testing &quot;button&quot; rule" 
+                       FontSize="24"
+                       Style="{StaticResource ThemedText}"/>
+            </VerticalStackLayout>
+            
+            <Label Text="Default Passing Case" 
+                   Margin="10,0"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <Button Text="I Pass" 
+                    SemanticProperties.Description="I Pass"
+                    HorizontalOptions="Fill"/>
+            
+            <Label Text="Case 1: The accessibility label must be unique. This text has the same accessibility label as the &quot;Same&quot; button so it fails the check" 
+                   Margin="10,0"
+                   SemanticProperties.Description="I fail due to duplicate label"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <Button Text="I fail due to duplicate label" 
+                    SemanticProperties.Description="I fail due to duplicate label"
+                    HorizontalOptions="Fill"/>
+            
+            <Label Text="Case 2: Button's accessibility label cannot contain the word &quot;button&quot; so this button fails the check" 
+                   Margin="10,0"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <Button Text="I fail due to &quot;button&quot;" 
+                    SemanticProperties.Description="I fail due to &quot;button&quot;"
+                    HorizontalOptions="Fill"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
