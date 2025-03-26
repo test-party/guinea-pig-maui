@@ -2,8 +2,6 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
@@ -12,6 +10,11 @@ public partial class MainPage : ContentPage
 	private async void OnOpenButtonScreenClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new ButtonPage());
+	}
+
+	private async void OnOpenCheckboxScreenClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new CheckboxPage());
 	}
 }
 

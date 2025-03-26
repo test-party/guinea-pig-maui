@@ -7,12 +7,20 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+
             <Button
                 x:Name="OpenButtonScreenBtn"
                 Text="Button Test"
                 SemanticProperties.Hint="Opens the Button page"
                 Clicked="OnOpenButtonScreenClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill"/>
+
+            <Button
+                x:Name="OpenCheckboxScreenBtn"
+                Text="Checkbox Test"
+                SemanticProperties.Hint="Opens the Checkbox Screen page"
+                Clicked="OnOpenCheckboxScreenClicked"
+                HorizontalOptions="Fill"/>
         </VerticalStackLayout>
     </ScrollView>
 

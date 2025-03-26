@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuineaPigMAUI.CheckboxPage"
+             Title="Checkbox Test">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+            
+            <VerticalStackLayout Margin="0,10" HorizontalOptions="Center">
+                <Label Text="Testing &quot;checkbox&quot; rule" 
+                       FontSize="24"
+                       Style="{StaticResource ThemedText}"/>
+            </VerticalStackLayout>
+            
+            <Label Text="Default Passing Case" 
+                   Margin="10,0"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <VerticalStackLayout Margin="0,10" HorizontalOptions="Center">
+                <CheckBox x:Name="ValidCheckbox" 
+                          IsChecked="{Binding IsChecked}"
+                          CheckedChanged="OnValidCheckboxChanged"
+                          SemanticProperties.Description="A valid checkbox"
+                          HorizontalOptions="Center"/>
+                
+                <CheckBox x:Name="ValidUncheckedCheckbox" 
+                          IsChecked="{Binding IsUnchecked}"
+                          CheckedChanged="OnValidUncheckedCheckboxChanged"
+                          SemanticProperties.Description="A valid unchecked checkbox"
+                          HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+            
+            <Label Text="Case 1: The checkbox must have an accessibility label. This checkbox doesn't so it fails." 
+                   Margin="10,0"
+                   SemanticProperties.Description="I fail due to no label"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <VerticalStackLayout Margin="0,10" HorizontalOptions="Center">
+                <CheckBox x:Name="NoLabelCheckbox" 
+                          IsChecked="{Binding IsChecked}"
+                          CheckedChanged="OnNoLabelCheckboxChanged"
+                          HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+            
+            <Label Text="Case 2: The accessibility label must be unique. This text has the same accessibility label as the checkbox below so it fails the check" 
+                   Margin="10,0"
+                   SemanticProperties.Description="I fail due to duplicate label"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <VerticalStackLayout Margin="0,10" HorizontalOptions="Center">
+                <CheckBox x:Name="DuplicateLabelCheckbox" 
+                          IsChecked="{Binding IsChecked}"
+                          CheckedChanged="OnDuplicateLabelCheckboxChanged"
+                          SemanticProperties.Description="I fail due to duplicate label"
+                          HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
