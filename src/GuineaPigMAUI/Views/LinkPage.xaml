@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuineaPigMAUI.LinkPage"
+             Title="Link Text Screen">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <!-- Title Section -->
+            <VerticalStackLayout Margin="0,10,0,10" 
+                                HorizontalOptions="Center">
+                <Label Text="Testing &quot;link text&quot; rule" 
+                       FontSize="24"
+                       Style="{StaticResource ThemedText}"/>
+            </VerticalStackLayout>
+            
+            <!-- Default Passing Cases -->
+            <Label Text="Default Passing Cases" 
+                   Margin="10,0"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <VerticalStackLayout Margin="0,10,0,10" 
+                               HorizontalOptions="Center"
+                               Spacing="10">
+                
+                <!-- Internal link using Button styled as a link -->
+                <Button Text="Passing Internal Link"
+                        Command="{Binding NavigateToHomeCommand}"
+                        BackgroundColor="Transparent"
+                        TextColor="{StaticResource Primary}"
+                        FontAttributes="Bold"
+                        BorderWidth="0"
+                        Padding="0"
+                        SemanticProperties.Description="Link to Home Page"/>
+                
+                <!-- External link using TapGestureRecognizer -->
+                <Label Text="Passing External Link" 
+                       TextColor="{StaticResource Primary}"
+                       FontAttributes="Bold"
+                       TextDecorations="Underline"
+                       SemanticProperties.Description="External Link">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenExternalLinkCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </VerticalStackLayout>
+            
+            <!-- Case 1: Duplicate Accessibility Labels -->
+            <Label Text="Case 1: Accessibility label must be unique. The Links below have the same accessibility label so they both fail the check." 
+                   Margin="10,0"
+                   Style="{StaticResource ThemedText}"/>
+            
+            <VerticalStackLayout Margin="0,10,0,10" 
+                               HorizontalOptions="Center"
+                               Spacing="10">
+                
+                <!-- Internal link with duplicate label -->
+                <Button Text="Internal Duplicate"
+                        Command="{Binding NavigateToHomeCommand}"
+                        BackgroundColor="Transparent"
+                        TextColor="{StaticResource Primary}"
+                        FontAttributes="Bold"
+                        BorderWidth="0"
+                        Padding="0"
+                        SemanticProperties.Description="I fail due to duplicate label"/>
+                
+                <!-- External link with duplicate label -->
+                <Label Text="External Duplicate" 
+                       TextColor="{StaticResource Primary}"
+                       FontAttributes="Bold"
+                       TextDecorations="Underline"
+                       SemanticProperties.Description="I fail due to duplicate label">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenExternalLinkCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

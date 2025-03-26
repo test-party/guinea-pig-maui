@@ -37,6 +37,13 @@
                 HorizontalOptions="Fill"/>
 
             <Button
+                x:Name="OpenLinkScreenBtn"
+                Text="Link Test"
+                SemanticProperties.Hint="Opens the Link Screen page"
+                Clicked="OnOpenLinkScreenClicked"
+                HorizontalOptions="Fill"/>
+
+            <Button
                 x:Name="OpenProgressIndicatorScreenBtn"
                 Text="Progress Indicator Test"
                 SemanticProperties.Hint="Opens the Progress Indicator Screen page"

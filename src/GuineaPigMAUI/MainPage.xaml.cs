@@ -27,6 +27,11 @@ public partial class MainPage : ContentPage
 		await Navigation.PushAsync(new ImagePage());
 	}
 
+	private async void OnOpenLinkScreenClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new LinkPage());
+	}
+
 	private async void OnOpenProgressIndicatorScreenClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new ProgressIndicatorPage());
