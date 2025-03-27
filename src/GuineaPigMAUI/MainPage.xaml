@@ -51,6 +51,13 @@
                 HorizontalOptions="Fill"/>
             
             <Button
+                x:Name="OpenStepperScreenBtn"
+                Text="Stepper Test"
+                SemanticProperties.Hint="Opens the Stepper Screen page"
+                Clicked="OnOpenStepperScreenClicked"
+                HorizontalOptions="Fill"/>
+            
+            <Button
                 x:Name="OpenTextInputScreenBtn"
                 Text="Text Input Test"
                 SemanticProperties.Hint="Opens the Text Input Screen page"

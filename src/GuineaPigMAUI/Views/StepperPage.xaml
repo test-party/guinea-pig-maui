@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuineaPigMAUI.StepperPage"
+             Title="Stepper Test">
+
+    <VerticalStackLayout BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}">
+        <Frame Margin="0,10,0,10"
+               BackgroundColor="Transparent"
+               BorderColor="Transparent"
+               Padding="10">
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Label Text="Testing &quot;steppers&quot; rule"
+                       FontSize="24"
+                       HorizontalOptions="Center"
+                       TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Label Text="Default Passing Case"
+               Margin="10,0,10,0"
+               TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+
+        <Frame Margin="0,10,0,10"
+               BackgroundColor="Transparent"
+               BorderColor="Transparent"
+               Padding="10">
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label x:Name="ValueLabel"
+                       Text="0"
+                       HorizontalOptions="Center"
+                       TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+                <Stepper x:Name="MyStepper"
+                         Minimum="0"
+                         Maximum="100"
+                         Increment="1"
+                         Value="0"
+                         HorizontalOptions="Center"
+                         ValueChanged="OnStepperValueChanged"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
