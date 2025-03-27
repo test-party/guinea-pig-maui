@@ -41,6 +41,11 @@ public partial class MainPage : ContentPage
 	{
 		await Navigation.PushAsync(new TextInputPage());
 	}
+
+	private async void OnOpenTextScreenClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new TextPage());
+	}
 	private async void OnOpenVideoScreenClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new VideoPage());

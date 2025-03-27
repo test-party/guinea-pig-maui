@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuineaPigMAUI.TextPage"
+             Title="Text Test">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label 
+                Text="Testing 'numberOfLines' rule"
+                FontSize="22"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Margin="0,0,0,16"/>
+
+            <!-- Pass Case: No numberOfLines used -->
+            <Label 
+                Text="Pass Case: No numberOfLines used"
+                FontSize="16"
+                FontAttributes="Bold"
+                Margin="0,30,0,6"
+                AutomationProperties.IsInAccessibleTree="False"/>
+            
+            <Label 
+                Text="This is a long paragraph that should wrap naturally based on the screen width and scale properly if the user increases text size."
+                FontSize="16"
+                BackgroundColor="#F3F3F3"
+                Padding="10"
+                LineBreakMode="WordWrap"/>
+
+            <!-- Fail Case: numberOfLines used -->
+            <Label 
+                Text="Fail Case: numberOfLines used"
+                FontSize="16"
+                FontAttributes="Bold"
+                Margin="0,30,0,6"
+                AutomationProperties.IsInAccessibleTree="False"/>
+            
+            <Label 
+                Text="This is a long paragraph that will be truncated after two lines. This prevents the text from expanding fully at large sizes, which is an accessibility fail."
+                FontSize="16"
+                BackgroundColor="#F3F3F3"
+                Padding="10"
+                MaxLines="2"
+                LineBreakMode="TailTruncation"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
