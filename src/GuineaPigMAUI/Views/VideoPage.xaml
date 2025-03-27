@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:media="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui.MediaElement"
+             x:Class="GuineaPigMAUI.VideoPage"
+             Title="Video Test">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            
+            <!-- Header -->
+            <VerticalStackLayout Margin="0,10,0,10"
+                                 HorizontalOptions="Center">
+                <Label Text="Testing Video Accessibility Label"
+                       FontSize="24"
+                       HorizontalOptions="Center"
+                       Style="{StaticResource ThemedText}"/>
+            </VerticalStackLayout>
+
+            <!-- Pass Case: default props -->
+            <VerticalStackLayout>
+                <Label Text="Pass Case: default props"
+                       Margin="5"
+                       Style="{StaticResource ThemedText}"/>
+                
+                <Border StrokeShape="RoundRectangle 10,10,10,10"
+                        BackgroundColor="Black"
+                        HorizontalOptions="Center"
+                        WidthRequest="400"
+                        HeightRequest="225">
+                    
+                    <media:MediaElement Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                  ShouldShowPlaybackControls="True"
+                                  HorizontalOptions="FillAndExpand" 
+                                  VerticalOptions="FillAndExpand"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Pass Case: custom accessibilityLabel -->
+            <VerticalStackLayout>
+                <Label Text="Pass Case: custom accessibilityLabel"
+                       Margin="5"
+                       Style="{StaticResource ThemedText}"/>
+                
+                <Border StrokeShape="RoundRectangle 10,10,10,10"
+                        BackgroundColor="Black"
+                        HorizontalOptions="Center"
+                        WidthRequest="400"
+                        HeightRequest="225">
+                    
+                    <media:MediaElement Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                  ShouldShowPlaybackControls="True"
+                                  HorizontalOptions="FillAndExpand" 
+                                  VerticalOptions="FillAndExpand"
+                                  SemanticProperties.Description="Funny bunny"/>
+                </Border>
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

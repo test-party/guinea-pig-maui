@@ -2,7 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GuineaPigMAUI.LinkPage"
+             xmlns:viewmodels="clr-namespace:GuineaPigMAUI.ViewModels"
+             x:DataType="viewmodels:LinkViewModel"
              Title="Link Text Screen">
+    <ContentPage.BindingContext>
+        <viewmodels:LinkViewModel />
+    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout>
