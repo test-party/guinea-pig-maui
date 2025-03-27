@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuineaPigMAUI.SheetPage"
+             BackgroundColor="{DynamicResource AppBackgroundColor}"
+             Title="Sheet Test">
+
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="16">
+            
+            <VerticalStackLayout Margin="0,10,0,10" HorizontalOptions="Center">
+                <Label Text="Testing 'sheet' rule" 
+                       FontSize="24" 
+                       TextColor="{DynamicResource TextColor}" />
+            </VerticalStackLayout>
+              
+            <Label Text="Fail Case: No Scroll View"
+                   TextColor="{DynamicResource TextColor}"
+                   Margin="0,20,0,10" />
+            
+            <Button Text="Show Fail Bottom Sheet"
+                    BackgroundColor="#294CFF"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    Padding="10"
+                    Clicked="OnShowFailBottomSheetClicked" />
+            
+            <Label Text="Pass Case: With Scroll View"
+                   TextColor="{DynamicResource TextColor}"
+                   Margin="0,20,0,10" />
+            
+            <Button Text="Show Pass Bottom Sheet"
+                    BackgroundColor="#294CFF"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    Padding="10"
+                    Clicked="OnShowPassBottomSheetClicked" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

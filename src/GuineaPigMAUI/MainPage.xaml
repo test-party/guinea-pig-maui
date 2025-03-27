@@ -51,6 +51,13 @@
                 HorizontalOptions="Fill"/>
             
             <Button
+                x:Name="OpenSheetScreenBtn"
+                Text="Sheet Test"
+                SemanticProperties.Hint="Opens the Sheet Screen page"
+                Clicked="OnOpenSheetScreenClicked"
+                HorizontalOptions="Fill"/>
+            
+            <Button
                 x:Name="OpenStepperScreenBtn"
                 Text="Stepper Test"
                 SemanticProperties.Hint="Opens the Stepper Screen page"

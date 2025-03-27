@@ -36,7 +36,12 @@ public partial class MainPage : ContentPage
 	{
 		await Navigation.PushAsync(new ProgressIndicatorPage());
 	}
-
+	
+	private async void OnOpenSheetScreenClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new SheetPage());
+	}
+	
 	private async void OnOpenStepperScreenClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new StepperPage());
